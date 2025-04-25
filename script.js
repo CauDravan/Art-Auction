@@ -175,7 +175,7 @@ function showSummary() {
       <tr>
         <td>${result.round}</td>
         <td>${result.artwork}</td>
-        <td>${result.actualPrice.toLocaleString()}</td>
+        <td>$${result.actualPrice.toLocaleString()}</td>
         <td>${userGuessDisplay}</td>
         <td>${accuracy}</td>
         <td>${result.pointsEarned}</td>
