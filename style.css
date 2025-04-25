@@ -1,0 +1,21 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: #f4f4f4;
+    padding: 20px;
+  }
+  
+  #game-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  #art-image {
+    width: 300px;
+    height: auto;
+    border-radius: 5px;
+  }
+  

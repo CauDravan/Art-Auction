@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Predict the price of paintings</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Dự đoán giá tranh nghệ thuật</h1>
+  <div id="game-container">
+    <img id="art-image" src="" alt="Artwork">
+    <h2 id="art-title"></h2>
+    <p id="art-artist"></p>
+    <input type="number" id="guess" placeholder="Nhập giá đoán (USD)">
+    <button onclick="checkGuess()">Xem kết quả</button>
+    <p id="result"></p>
+    <button onclick="nextArtwork()">Tranh tiếp theo</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
