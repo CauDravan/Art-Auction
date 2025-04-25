@@ -56,9 +56,10 @@ function checkGuess() {
   
   const actualPrice = artworks[currentIndex].price;
   const diff = Math.abs(userGuess - actualPrice);
-  const percentDiff = (diff / actualPrice) * 100;
+  const percentDiff = Math.min(100, Math.abs((diff / actualPrice) * 100));
   
-  let resultMessage = `Real price: ${actualPrice.toLocaleString()}. `;
+  let resultMessage = `Real price: $${actualPrice.toLocaleString()}. `;
+  resultMessage += `Accuracy: ${Math.max(0, Math.min(100, 100 - percentDiff)).toFixed(1)}%. `;
   let pointsEarned = 0;
   
   // Calculate points based on how close the guess was
@@ -141,7 +142,7 @@ function showSummary() {
   });
   
   const averageAccuracy = roundsWithGuesses > 0 ? 
-    100 - (totalPercentOff / roundsWithGuesses) : 0;
+    Math(max(0, Math.min(100, 100 - (totalPercentOff / roundsWithGuesses))) : 0;
   
   // Create summary HTML
   let summaryHTML = `
