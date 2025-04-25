@@ -1,1 +1,1 @@
-# Art-Auction-Game
+Art Auction, small project
