@@ -2,19 +2,35 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Predict the price of paintings</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Dự đoán giá tranh nghệ thuật</h1>
-  <div id="game-container">
-    <img id="art-image" src="" alt="Artwork">
-    <h2 id="art-title"></h2>
-    <p id="art-artist"></p>
-    <input type="number" id="guess" placeholder="Nhập giá đoán (USD)">
-    <button onclick="checkGuess()">Xem kết quả</button>
-    <p id="result"></p>
-    <button onclick="nextArtwork()">Tranh tiếp theo</button>
+  <div class="container">
+    <h1>Predict the price of paintings</h1>
+    <div id="game-container">
+      <div class="artwork-display">
+        <img id="art-image" src="" alt="Artwork">
+        <div class="artwork-info">
+          <h2 id="art-title"></h2>
+          <p id="art-artist"></p>
+          <p id="art-year"></p>
+          <p id="art-style"></p>
+        </div>
+      </div>
+      <div class="guess-area">
+        <div class="input-group">
+          <input type="number" id="guess" placeholder="Input price ($)" min="0">
+          <button id="check-btn" onclick="checkGuess()">Xem kết quả</button>
+        </div>
+        <p id="result"></p>
+        <div class="score-display">
+          <p>Your score: <span id="score">0</span></p>
+        </div>
+        <button id="next-btn" onclick="nextArtwork()">Next painting</button>
+      </div>
+    </div>
   </div>
   <script src="script.js"></script>
 </body>
