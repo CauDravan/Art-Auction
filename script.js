@@ -47,7 +47,7 @@ function showArtwork() {
 function checkGuess() {
   const guessInput = document.getElementById("guess");
   const userGuessText = guessInput.value.replace(/,/g, '');
-  const userGuess = parseInt(userGuessText);
+  const userGuess = parseFloat(userGuessText);
   
   if (isNaN(userGuess) || userGuess < 0) {
     document.getElementById("result").textContent = "Please enter a valid number.";
