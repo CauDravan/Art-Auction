@@ -142,7 +142,7 @@ function showSummary() {
   });
   
   const averageAccuracy = roundsWithGuesses > 0 ? 
-    Math(max(0, Math.min(100, 100 - (totalPercentOff / roundsWithGuesses))) : 0;
+    Math.max(0, Math.min(100, 100 - (totalPercentOff / roundsWithGuesses))) : 0;
   
   // Create summary HTML
   let summaryHTML = `
