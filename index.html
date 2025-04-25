@@ -3,13 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Predict the price of paintings</title>
+  <title>Art Price Guessing Game</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
-    <h1>Predict the price of paintings</h1>
+    <h1>Art Price Guessing Game</h1>
     <div id="game-container">
+      <div class="game-status">
+        <div class="round-display">
+          <p>Round: <span id="current-round">1</span>/5</p>
+        </div>
+        <div class="score-display">
+          <p>Score: <span id="score">0</span></p>
+        </div>
+      </div>
+      
       <div class="artwork-display">
         <img id="art-image" src="" alt="Artwork">
         <div class="artwork-info">
@@ -19,16 +28,25 @@
           <p id="art-style"></p>
         </div>
       </div>
+      
       <div class="guess-area">
         <div class="input-group">
-          <input type="number" id="guess" placeholder="Input price ($)" min="0">
-          <button id="check-btn" onclick="checkGuess()">Xem kết quả</button>
+          <input type="number" id="guess" placeholder="Enter your guess (USD)" min="0">
+          <button id="check-btn" onclick="checkGuess()">Check Result</button>
         </div>
         <p id="result"></p>
-        <div class="score-display">
-          <p>Your score: <span id="score">0</span></p>
+        <button id="next-btn" onclick="nextArtwork()">Next Artwork</button>
+      </div>
+      
+      <!-- Summary Modal -->
+      <div id="summary-modal" class="modal">
+        <div class="modal-content">
+          <h2>Game Summary</h2>
+          <div id="summary-content">
+            <!-- Will be filled dynamically -->
+          </div>
+          <button id="play-again-btn" onclick="resetGame()">Play Again</button>
         </div>
-        <button id="next-btn" onclick="nextArtwork()">Next painting</button>
       </div>
     </div>
   </div>
