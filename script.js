@@ -63,13 +63,13 @@ function checkGuess() {
   let pointsEarned = 0;
   
   // Calculate points based on how close the guess was
-  if (percentDiff <= 5) {
+  if (percentDiff <= 25) {
     pointsEarned = 10;
     resultMessage += `Excellent! You were only off by ${percentDiff.toFixed(1)}%. +${pointsEarned} points!`;
-  } else if (percentDiff <= 15) {
+  } else if (percentDiff <= 35) {
     pointsEarned = 5;
     resultMessage += `Very good! You were off by ${percentDiff.toFixed(1)}%. +${pointsEarned} points!`;
-  } else if (percentDiff <= 30) {
+  } else if (percentDiff <= 50) {
     pointsEarned = 2;
     resultMessage += `Not bad! You were off by ${percentDiff.toFixed(1)}%. +${pointsEarned} points!`;
   } else {
